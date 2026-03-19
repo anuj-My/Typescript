@@ -3,6 +3,7 @@ import "./scripts/typeAnnotations.ts";
 import "./scripts/unionType.ts";
 import "./scripts/arrayAndObjects.ts";
 import "./scripts/typeInFunctions.ts";
+import "./scripts/aliasAndIntersectionType.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <h1>TypeScript</h1>

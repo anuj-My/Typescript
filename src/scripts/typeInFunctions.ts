@@ -114,7 +114,7 @@ const newStudent = {
 createStudent(newStudent);
 
 // excess property check
-createStudent({ id: 1, name: "bob", email: "bob@gmail.com" });
+// createStudent({ id: 1, name: "bob", email: "bob@gmail.com" });
 
 // ## Challenge
 
