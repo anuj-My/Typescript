@@ -85,3 +85,63 @@ function processInput(input: string | number) {
 }
 processInput(2);
 processInput("hey there");
+
+function createEmployee({ id }: { id: number }): {
+  id: number;
+  isActive: boolean;
+} {
+  return { id, isActive: id % 2 === 0 };
+}
+
+console.log(
+  createEmployee({ id: 1 }),
+  createEmployee({ id: 2 }),
+  createEmployee({ id: 3 }),
+);
+
+// alternative
+function createStudent(student: { id: number; name: string }): void {
+  console.log(`Welcome to the course ${student.name.toUpperCase()}.`);
+}
+
+const newStudent = {
+  id: 5,
+  name: "peter",
+  email: "dfa",
+};
+
+// if reference the object it will not check if there is excess property
+createStudent(newStudent);
+
+// excess property check
+createStudent({ id: 1, name: "bob", email: "bob@gmail.com" });
+
+// ## Challenge
+
+// Your task is to create a function named processData that accepts two parameters:
+
+// - The first parameter, input, should be a union type that can be either a string or a number.
+// - The second parameter, config, should be an object with a reverse property of type boolean, by default it "reverse" should be false
+
+// The function should behave as follows:
+
+// - If input is of type number, the function should return the square of the number.
+// - If input is of type string, the function should return the string in uppercase.
+// - If the reverse property on the config object is true, and input is a string, the function should return the reversed string in uppercase.
+
+function processData(
+  input: string | number,
+  config: { reverse: boolean } = { reverse: false },
+): string | number {
+  if (typeof input === "number") {
+    return input * input;
+  } else {
+    return config.reverse
+      ? input.toUpperCase().split("").reverse().join("")
+      : input.toUpperCase();
+  }
+}
+
+console.log(processData("peter"));
+console.log(processData(10));
+console.log(processData("peter", { reverse: true }));
