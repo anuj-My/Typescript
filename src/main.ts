@@ -4,6 +4,7 @@ import "./scripts/unionType.ts";
 import "./scripts/arrayAndObjects.ts";
 import "./scripts/typeInFunctions.ts";
 import "./scripts/aliasAndIntersectionType.ts";
+import "./scripts/interface.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <h1>TypeScript</h1>
