@@ -8,6 +8,7 @@ import "./scripts/interface.ts";
 import "./scripts/tuplesAndEnums.ts";
 import "./scripts/AssertionUnknownNever.ts";
 import "./scripts/typeGaurds.ts";
+import "./scripts/generics.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <h1>TypeScript</h1>
