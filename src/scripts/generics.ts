@@ -27,7 +27,7 @@ interface GenericInterface<T> {
 const genericString: GenericInterface<string> = {
   value: "hello world",
   getValue() {
-    this.value;
+    return this.value;
   },
 };
 
