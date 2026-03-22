@@ -13,4 +13,5 @@ import "./scripts/fetchData.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <h1>TypeScript</h1>
+<a href= "/tasks">Task Page</a>
 `;
